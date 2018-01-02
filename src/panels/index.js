@@ -48,9 +48,25 @@ export default (editor, config) => {
       command: e => e.runCommand(expt),
     },{
       id: 'save',
-      className: 'fa fa-code',
+      className: 'fa fa-floppy-o',
       command: function() {
-        alert(123);
+
+        var data = {
+          css: editor.getCss(),
+          html: editor.getHtml(),
+          _id: window.page ? window.page._id : 'ggggggg',
+        }
+                
+        window.$.ajax({
+          type: "POST",
+          url: base_url + '/storage/html',
+          data: data,
+          success: function(data) {
+            console.log('saved template.')
+          },
+          dataType: 'json'
+        });
+
       },
     },{
       id: 'undo',
