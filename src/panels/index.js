@@ -47,6 +47,12 @@ export default (editor, config) => {
       className: 'fa fa-code',
       command: e => e.runCommand(expt),
     },{
+      id: 'save',
+      className: 'fa fa-code',
+      command: function() {
+        alert(123);
+      },
+    },{
       id: 'undo',
       className: 'fa fa-undo',
       command: e => e.runCommand('core:undo'),
