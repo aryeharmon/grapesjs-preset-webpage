@@ -62,7 +62,7 @@ export default (editor, config) => {
           url: base_url + '/storage/html',
           data: data,
           success: function(data) {
-            console.log('saved template.')
+            window.toastr.success('saved template.');
           },
           dataType: 'json'
         });
