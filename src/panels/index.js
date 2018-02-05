@@ -69,6 +69,10 @@ export default (editor, config) => {
 
       },
     },{
+      id: 'color',
+      className: 'fa fa-eyedropper',
+      command: e => e.runCommand('maincolor'),
+    },{
       id: 'undo',
       className: 'fa fa-undo',
       command: e => e.runCommand('core:undo'),
