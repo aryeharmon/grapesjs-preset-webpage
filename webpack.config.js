@@ -8,7 +8,7 @@ let plugins = [];
 module.exports = (env = {}) => {
   if (env.production) {
     plugins = [
-      new webpack.optimize.UglifyJsPlugin({ minimize: true, compressor: { warnings: false }}),
+      new webpack.optimize.UglifyJsPlugin({ minimize: false, compressor: { warnings: false }}),
       new webpack.BannerPlugin(`${name} - ${pkg.version}`),
     ]
   } else {
