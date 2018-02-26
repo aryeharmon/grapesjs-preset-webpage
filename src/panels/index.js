@@ -56,7 +56,33 @@ export default (editor, config) => {
           html: editor.getHtml(),
           _id: window.page ? window.page._id : 'ggggggg',
         }
-                
+
+        window.$.ajax({
+          type: "POST",
+          url: base_url + '/storage/html',
+          data: data,
+          success: function(data) {
+            window.toastr.success('saved template.');
+          },
+          dataType: 'json'
+        });
+
+      },
+    },{
+      id: 'hard-save',
+      className: 'fa fa-hdd-o',
+      command: function() {
+
+        var name = prompt("Enter a revision name", "");
+
+        var data = {
+          css: editor.getCss(),
+          html: editor.getHtml(),
+          name: name,
+          hard: 1,
+          _id: window.page ? window.page._id : 'ggggggg',
+        }
+
         window.$.ajax({
           type: "POST",
           url: base_url + '/storage/html',
