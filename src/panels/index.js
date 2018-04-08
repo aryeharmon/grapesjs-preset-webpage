@@ -54,6 +54,7 @@ export default (editor, config) => {
         var data = {
           css: editor.getCss(),
           html: editor.getHtml(),
+          editor_settings: editor_settings,
           _id: window.page ? window.page._id : 'ggggggg',
         }
 
@@ -78,6 +79,7 @@ export default (editor, config) => {
         var data = {
           css: editor.getCss(),
           html: editor.getHtml(),
+          editor_settings: editor_settings,
           name: name,
           hard: 1,
           _id: window.page ? window.page._id : 'ggggggg',
