@@ -1,6 +1,6 @@
 {
   "name": "grapesjs-preset-webpage",
-  "version": "0.1.14",
+  "version": "0.1.23",
   "description": "GrapesJS Plugin Webpage Preset",
   "main": "dist/grapesjs-preset-webpage.min.js",
   "scripts": {
@@ -30,9 +30,6 @@
     "plugins": [
       "transform-object-rest-spread"
     ]
-  },
-  "peerDependencies": {
-    "grapesjs": "0.x"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

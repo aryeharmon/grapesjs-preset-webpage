@@ -116,6 +116,20 @@ export default (editor, config) => {
       id: cmdClear,
       className: 'fa fa-trash',
       command: e => e.runCommand(cmdClear),
+    },{
+      id: 'allow_input_layout',
+      className: 'fa fa-map-pin updateable-button',
+      command: function() {
+        window.allow_input_layout = !window.allow_input_layout;
+
+        if (window.allow_input_layout) {
+          window.toastr.success('Allow updateable enabled.');
+          $('.updateable-button').css('color', 'red');
+        } else {
+          window.toastr.warning('Allow updateable disabled.');
+          $('.updateable-button').css('color', 'inherit');
+        }
+      },
     }],
   },{
     id: 'views',
