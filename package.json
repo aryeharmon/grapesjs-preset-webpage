@@ -48,6 +48,6 @@
     "grapesjs-component-countdown": "^0.1.1",
     "grapesjs-plugin-export": "^0.1.5",
     "grapesjs-plugin-filestack": "^0.1.1",
-    "grapesjs-plugin-forms": "^0.3.4"
+    "grapesjs-plugin-forms": "git+https://github.com/aryeharmon/grapesjs-plugin-forms.git"
   }
 }
