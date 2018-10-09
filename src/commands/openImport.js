@@ -7,6 +7,8 @@ export default (editor, config) => {
   const importCnt = config.modalImportContent;
   let viewerEditor = codeViewer.editor;
 
+  window.current_window = viewerEditor;
+
   // Init import button
   const btnImp = document.createElement('button');
   btnImp.type = 'button';
